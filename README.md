@@ -143,10 +143,10 @@ WHERE e.mgr = 7839;
 ### 11. Retrieve the total salary paid in each department, ordered by department number
 
 ```sql
-SELECT d.dname, SUM(e.sal) AS Total_Salary
+11. SELECT d.deptno, d.dname, SUM(e.sal) AS total_salary
 FROM emp e
 JOIN dept d ON e.deptno = d.deptno
-GROUP BY d.dname
+GROUP By d.deptno, d.dname
 ORDER BY d.deptno;
 ```
 
