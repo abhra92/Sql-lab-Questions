@@ -143,7 +143,7 @@ WHERE e.mgr = 7839;
 ### 11. Retrieve the total salary paid in each department, ordered by department number
 
 ```sql
-11. SELECT d.deptno, d.dname, SUM(e.sal) AS total_salary
+SELECT d.deptno, d.dname, SUM(e.sal) AS total_salary
 FROM emp e
 JOIN dept d ON e.deptno = d.deptno
 GROUP By d.deptno, d.dname
@@ -200,7 +200,7 @@ GROUP BY d.dname;
 ### 16. Retrieve the department names and the count of employees, but only include departments with more than 3 employees
 
 ```sql
-16. SELECT d.dname, COUNT(e.empno) AS employee_count, SUM(e.sal) AS total_salary
+SELECT d.dname, COUNT(e.empno) AS employee_count, SUM(e.sal) AS total_salary
 FROM emp e
 JOIN dept d ON e.deptno = d.deptno
 GROUP BY d.dname
@@ -369,8 +369,8 @@ FROM emp;
 
 ```sql
 SELECT ename,
-       REVERSE(ename) AS reversed_name,
-       ASCII(SUBSTR(ename, 1, 1)) AS ascii_first_letter
+REVERSE(ename) AS reversed_name,
+ASCII(SUBSTR(ename, 1, 1)) AS ascii_first_letter
 FROM emp;
 ```
 
@@ -432,9 +432,9 @@ WHERE e.job = m.job;
 
 ```sql
 SELECT deptno,
-       AVG(sal) AS avg_salary,
-       MIN(sal) AS min_salary,
-       MAX(sal) AS max_salary
+AVG(sal) AS avg_salary,
+MIN(sal) AS min_salary,
+MAX(sal) AS max_salary
 FROM emp
 GROUP BY deptno;
 ```
