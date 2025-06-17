@@ -200,7 +200,7 @@ GROUP BY d.dname;
 ### 16. Retrieve the department names and the count of employees, but only include departments with more than 3 employees
 
 ```sql
-SELECT d.dname, COUNT(e.empno) AS Emp_Count
+16. SELECT d.dname, COUNT(e.empno) AS employee_count, SUM(e.sal) AS total_salary
 FROM emp e
 JOIN dept d ON e.deptno = d.deptno
 GROUP BY d.dname
